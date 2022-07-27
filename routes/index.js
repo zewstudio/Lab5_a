@@ -6,7 +6,7 @@ const {request} = require("express");
 const {text} = require("body-parser");
 var storage = multer.diskStorage({
   destination: function(req, file, cb) {
-    cb(null, 'https://github.com/zewstudio/Lab5_a/tree/master/uploads');
+    cb(null, 'uploads');
   },
   filename: function(req, file, cb) {
     var UrlLink = Date.now()+ Math.random() + file.originalname;
