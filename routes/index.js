@@ -9,7 +9,7 @@ var storage = multer.diskStorage({
     cb(null, 'uploads');
   },
   filename: function(req, file, cb) {
-    var UrlLink = Date.now()+ Math.random() + file.originalname;
+    var UrlLink = Date.now()+""+ Math.random()+"" + file.originalname;
     setUrlIMG(UrlLink);
     cb(null, UrlLink );
     setUrlIMG(file.originalname);
@@ -50,7 +50,7 @@ function myFuncion(){
   let ArrayForm_ = {
     "title_":title_,
     "MoTa_":mota_,
-    "URLIMG_":"https://raw.githubusercontent.com/zewstudio/Lab5_a/master/uploads/"+urlIMG_,
+    "URLIMG_":"../../"+urlIMG_,
   }
   ArrayForm.unshift(ArrayForm_);
 }
